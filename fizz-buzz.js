@@ -31,3 +31,11 @@ for (let i = 1; i <= 100; i += 1) {
   }
   */
 }
+
+// clever solution
+for (let n = 1; n <= 100; n += 1) {
+  let result = "";
+  if (n % 3 === 0) result += 'Fizz';
+  if (n % 5 === 0) result += 'Buzz';
+  console.log(result || n);
+}
