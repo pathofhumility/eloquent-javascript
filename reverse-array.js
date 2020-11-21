@@ -15,6 +15,16 @@ function reverseArray(arr) {
   return reversedArray;
 }
 
+// reverses array without built-in method(s)
+function reverseArrayNoBuiltin(arr) {
+  let reversedArray = [];
+  let arrLength = arr.length - 1;
+  for (let i = arr.length - 1; i >= 0; i -= 1) {
+    reversedArray[arrLength - i] = arr[i];
+  }
+  return reversedArray;
+}
+
 function reverseArrayInPlace(arr) {
   let reversedArray = reverseArray(arr);
   for (let i = 0; i < arr.length; i += 1) {
@@ -23,6 +33,7 @@ function reverseArrayInPlace(arr) {
 }
 
 console.log(reverseArray(['A', 'B', 'C']));
+console.log(reverseArrayNoBuiltin(['A', 'B', 'C']));
 
 let arr = [1, 2, 3, 4, 5];
 reverseArrayInPlace(arr);
